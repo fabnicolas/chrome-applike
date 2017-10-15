@@ -29,12 +29,12 @@ int main(void){
 		"&";
 	#endif
 
-	FILE *f = fopen(shell_file, "w");	// Open in write mode.
+	FILE *f = fopen(shell_file, "w");	// Create shell file (so open it in write mode).
 	if(f == NULL){
 	    printf("Error generating file.\n");
 	    exit(1);
 	}
-	fprintf(f, "%s", shell_code);	// Write shell code in a temporary .sh.
+	fprintf(f, "%s", shell_code);	// Write shell code in a temporary script file.
 	fclose(f);
 	printf("Launching application...\n");
 
