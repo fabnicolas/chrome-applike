@@ -24,7 +24,7 @@ int main(void){
 	printf("Launching application...\n");
 	pid_t pid;
 	if((pid=fork())==0){
-    	chmod(shell_file, strtol("0777",0,8));				// Make .sh executable.
+		chmod(shell_file, strtol("0777",0,8));				// Make .sh executable.
 		execl("/bin/bash", "bash", shell_file, (char*)0);	// Launch .sh.
 	}
 	wait(NULL);		// Wait for child to finish...
