@@ -13,7 +13,6 @@ int main(void){
 	" --hide-scrollbars"									// Additional flag for app mode.
 	"&";													// Detach process when invoked.
 
-
 	FILE *f = fopen(shell_file, "w");	// Open in write mode.
 	if(f == NULL){
 	    printf("Error generating file.\n");
